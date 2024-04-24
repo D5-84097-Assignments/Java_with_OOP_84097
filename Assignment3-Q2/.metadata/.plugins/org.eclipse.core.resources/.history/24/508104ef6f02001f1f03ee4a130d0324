@@ -1,0 +1,39 @@
+package tester;
+
+import java.util.Arrays;
+import java.util.Scanner;
+import com.app.geometry.Point2D;
+
+public class TestPoint {
+ public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     int[] arr= {1};
+	
+	System.out.println(Arrays.toString(arr));
+
+     // Accept coordinates of 2 points from user
+     System.out.println("Enter coordinates of point 1 (x y):");
+     int x1 = sc.nextInt();
+     int y1 = sc.nextInt();
+     Point2D p1 = new Point2D(x1, y1);
+
+     System.out.println("Enter coordinates of point 2 (x y):");
+     int x2 = sc.nextInt();
+     int y2 = sc.nextInt();
+     Point2D p2 = new Point2D(x2, y2);
+
+     // Display point details
+     System.out.println("Details of point 1: " + p1.getDetails());
+     System.out.println("Details of point 2: " + p2.getDetails());
+
+     // Check if points are located at the same position
+     if (p1.isEqual(p2)) {
+         System.out.println("Points p1 and p2 are located at the same position.");
+     } else {
+         // If they are not located at the same position, display distance between p1 and p2
+         double distance = p1.calculateDistance(p2);
+         System.out.println("Points p1 and p2 are located at different positions.");
+         System.out.println("Distance between p1 and p2: " + distance);
+     }
+ }
+}
