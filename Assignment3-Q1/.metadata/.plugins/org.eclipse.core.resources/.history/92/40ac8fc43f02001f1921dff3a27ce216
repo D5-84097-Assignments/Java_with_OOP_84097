@@ -1,0 +1,10 @@
+
+public class InvoiceTest {
+
+	public static void main(String[] args) {
+		Invoice invo = new Invoice("12","mouse",10,12.5);
+		invo.invoice_amount();
+
+	}
+
+}
