@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Bill {
+
+	public static void main(String[] args) {
+		System.out.println("1.Samosa \n2.Idli \n3.Vadapav \n4.Kachori \n5.Pani puri \n6.Momos \n7.Medu vada \n8.Talipeeth \n9.Dosa \n10.Generate bill");
+		int choice=0;
+		int price = 0, bill = 0;
+		while(choice != 10 && choice <11 && choice > 0)
+		{
+			System.out.println("Enter Choice");
+			Scanner sc = new Scanner(System.in);
+			choice = sc.nextInt();
+			if(choice == 1)
+			{	
+				price = 10;
+			}
+			else if(choice == 2)
+			{	
+				price = 20;
+			}
+			else if(choice == 3)
+			{	
+				price = 15;
+			}
+			else if(choice == 4)
+			{	
+				price = 15;
+			}
+			else if(choice == 5)
+			{	
+				price = 20;
+			}
+			else if(choice == 6)
+			{	
+				price = 40;
+			}
+			else if(choice == 7)
+			{	
+				price = 25;
+			}
+			else if(choice == 8)
+			{	
+				price = 45;
+			}
+			else if(choice == 9)
+			{	
+				price = 40;
+			}
+			bill += price;
+		}
+		System.out.println("Bill Amout - Rs."+ bill);
+	}
+
+}

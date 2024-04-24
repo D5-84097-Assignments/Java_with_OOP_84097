@@ -1,0 +1,10 @@
+
+public class Bill {
+
+	public static void main(String[] args) {
+		System.out.println("Choose Item form list:");
+		System.out.println("1.Samosa \n 2.Idli");
+
+	}
+
+}
