@@ -1,0 +1,32 @@
+package tester;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+import com.app.geometry.Point2D;
+
+public class TestPointArray1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the no. of points you want to enter:");
+		
+		Point2D [] points = new Point2D[sc.nextInt()];
+		
+		for(int i=0; i< points.length; i++)
+		{
+			System.out.println("Enter x and y co-ordinates");
+			int x = sc.nextInt();
+			int y = sc.nextInt();
+			points[i] = new Point2D(x,y); 
+		}
+		
+		for(Point2D element:points)
+		{
+			System.out.print(element.getDetails());
+		}
+
+	}
+
+}
