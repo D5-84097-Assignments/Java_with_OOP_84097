@@ -1,0 +1,33 @@
+package EmployeeSalary;
+
+import java.util.Scanner;
+
+public abstract class Hourly_Employee extends Employee {
+	private int wage;
+	private int hrs;
+	
+	public Hourly_Employee() {
+	}
+
+	public Hourly_Employee(int wage, int hrs) {
+		super();
+		this.wage = wage;
+		this.hrs = hrs;
+	}
+	
+	@Override
+	public void accept(Scanner sc) {
+		super.accept(sc);
+		System.out.println("Enter hourly wages");
+		wage = sc.nextInt();
+		System.out.println("Enter no. of hours worked");
+		hrs = sc.nextInt();
+	}
+	
+	@Override
+	public void calculateSalary() {
+		super.display();
+		System.out.println("Total Salary - "+ (wage*hrs));
+		
+	}
+}
