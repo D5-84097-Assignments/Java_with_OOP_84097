@@ -1,0 +1,30 @@
+package SortingStudents;
+
+public abstract class Student implements Comparable<Student> 
+{
+	private int rollno;
+	private String name;
+	private int marks;
+	
+	public Student() {
+	}
+	
+	
+	public Student(int rollno, String name, int marks) {
+		this.rollno = rollno;
+		this.name = name;
+		this.marks = marks;
+	}
+	
+	@Override
+	public String toString() {
+		return "Student [ Roll No.-" + rollno + ", Name-" + name + ", Marks-" + marks + "]";
+	}
+
+	@Override
+	public int compareTo(Student o) {
+		return this.marks-o.marks;
+	}
+
+	
+}
